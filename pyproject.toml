@@ -5,7 +5,8 @@ description = ""
 authors = [
     {name = "", email = ""},
 ]
-dependencies = []
+dependencies = [
+]
 requires-python = ">=3.10"
 license = {text = ""}
 
@@ -22,11 +23,13 @@ dev = [
     "black>=23.3.0",
     "isort>=5.12.0",
     "pyproject-flake8>=6.0.0.post1",
+    "types-requests>=2.31.0.2",
 ]
 
 [tool.flake8]
     exclude = [".venv", ".git", "__pycache__", "__pypackages__"]
-    line-length = 88
+    line-length = 79
+    extend-ignore = "E203"
 
 [tool.mypy]
 show_error_context = true
@@ -40,8 +43,8 @@ warn_redundant_casts = true
 
 [tool.black]
 target-version = ['py311']
-line-length = 88
+line-length = 79
 
 [tool.isort]
 profile = "black"
-line_length = 88
+line_length = 79
